@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+    
+--Bright_orange: hsl(31, 77%, 52%);
+--Dark_cyan: hsl(184, 100%, 22%);
+--Very_dark_cyan: hsl(179, 100%, 13%);
+}
+
+body{
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    color: white;
+    height: 100vh;
+}
+
+.card{
+    padding: 50px;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+button{
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: var(--Bright_orange);
+    width: 150px;
+    height: 40px;
+    font-family: "Lexend Deca", serif;
+    font-size: large;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    margin: 0px;
+
+}
+
+#sedan_btn{
+    color: var(--Bright_orange);
+}
+
+#suv_btn{
+    color: var(--Dark_cyan);
+}
+
+#luxury_btn{
+    color: var(--Very_dark_cyan);
+}
+
+#sedan_btn:hover, #suv_btn:hover, #luxury_btn:hover{ 
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+
+
+h1{
+    font-family: "Big Shoulders Display", serif;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p{
+    font-family: "Lexend Deca", serif;
+    font-size: 25px;
+    font-weight: 250;
+
+}
+
+#sedan{
+    background-color: var(--Bright_orange);
+}
+
+#suv{
+    background-color: var(--Dark_cyan);
+}
+
+#luxury{
+    background-color: var(--Very_dark_cyan);
+}
+
+@media screen and (max-width: 375px) {
+
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        margin: 0%;
+        padding: 0%;
+        color: white;
+        height: 100vh;
+    }
+
+    #sedan, #suv, #luxury{
+        padding: 20px;
+        height: fit-content;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    #sedan {
+        grid-row: 1/2;
+    }
+
+    #suv {
+        grid-row: 2/3;
+    }
+
+    #luxury {
+        grid-row: 3/4;
+    }
+
+    button{
+        position: relative;
+    }
+
+    
+    
+}
